@@ -1,0 +1,172 @@
+/* Para que los bordes y padding no afecten a las medidas de las cajas*/
+*{
+    box-sizing: border-box;
+}
+
+/* Pongo máximo de ancho y lo alineo al centro con margen izquierdo al 25%*/
+html{
+    font-family: sans-serif;
+    font-size: 14px;
+    max-width: 1000px;
+    margin-left: 25%;
+    text-align: justify;
+}
+
+/* Pongo borde y altura a la cabecera*/
+.cabecera{
+    border: 1px solid black;
+    height: 180px
+}
+
+/* Le pongo a la imagen de la cabecera que ocupe el 100% de alto y ancho de la caja*/
+.cabecera img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Padding vertical al navegador y los pongo en flex para poner el menú en horizontal*/
+nav{
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Padding horizontal a cada cajita para separarlas un poco*/
+nav div{
+    padding: 0px 36px;
+    border: 1px solid black;
+    margin-right: 10px;
+    height: 25px;
+    align-content: center;
+    background-color: rgb(71, 162, 236);
+}
+
+/* Quitar el subrayado a los links*/
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Botones reactivos al pasar el ratón por encima*/
+nav div:hover{
+    background-color: rgb(62, 38, 168);
+    cursor: pointer;
+}
+
+/* Le doy al botón de nav en el que me encuentro el mismo color que el que tiene cuando lo señalo
+para indicar al usuario que está en ese link*/
+nav div:last-child{
+    background-image: linear-gradient(white, rgb(62, 38, 168) 5px);
+}
+
+/* Distribuyo el grid de la web a partir de la sección de article en 2 column y 3 filas*/
+article{
+    border: 1px solid black;
+    padding: 0px 35px;
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 350px 500px;
+}
+
+/* Fusiono celdas según me convenga*/
+.seccion1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.seccion2{
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+/* Configuro la imagen de abajo*/
+.seccion1 img{
+    height: 80%;
+    width: 100%;
+    object-fit:cover;
+    padding: 20px 80px;
+}
+
+/* Configuro el pie de página y alineo el texto verticalmente*/
+footer{
+    border: 1px solid black;
+    height: 60px;
+    align-content: center;
+}
+
+/* Alineo el texto al centro horizontalmente*/
+.pie{
+    text-align: center;
+}
+
+.seccion2{
+    margin-left: 25%;
+    text-transform: uppercase;
+    line-height: 15px;
+}
+
+form{
+    padding-top: 20px;
+    display: grid;
+    grid-template-columns: 100px 400px;
+    grid-template-rows: 50px 50px 50px 50px 50px 50px;
+}
+
+.p1, .p2, .p3, .p4, .p5{
+    grid-column: 1 / 2;
+}
+
+input{
+    grid-column: 2 / 3;
+    margin-top: 20px;
+    margin-left: 10px;
+    background-color: rgba(210, 217, 224, 0.555);
+}
+
+#nombre{
+    grid-row: 1 / 2;
+}
+
+#direccion{
+    grid-row: 2 / 3;
+}
+
+#tlf{
+    grid-row: 3 / 4;
+}
+
+#edad{
+    grid-row: 4 / 5;
+}
+
+#mail{
+    grid-row: 5 / 6;
+}
+
+span{
+    margin-top: 27px;
+}
+
+.enviar{
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    margin-left: 0px;
+    height: 40px;
+    width: 200px;
+    background-color: rgb(139, 150, 212);
+    color: white;
+}
+
+.reset{
+    grid-column: 1 / 3;
+    grid-row: 6 / 7;
+    margin-left: 150px;
+    height: 40px;
+    width: 200px;
+    background-color: rgb(139, 150, 212);
+    color: white;
+}
+
+
+
+

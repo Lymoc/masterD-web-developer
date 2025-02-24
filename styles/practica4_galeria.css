@@ -1,0 +1,120 @@
+/* Para que los bordes y padding no afecten a las medidas de las cajas*/
+*{
+    box-sizing: border-box;
+}
+
+/* Pongo máximo de ancho y lo alineo al centro con margen izquierdo al 25%*/
+html{
+    font-family: sans-serif;
+    font-size: 14px;
+    max-width: 1000px;
+    margin-left: 25%;
+    text-align: justify;
+}
+
+/* Pongo borde y altura a la cabecera*/
+.cabecera{
+    border: 1px solid black;
+    height: 180px
+}
+
+/* Le pongo a la imagen de la cabecera que ocupe el 100% de alto y ancho de la caja*/
+.cabecera img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Padding vertical al navegador y los pongo en flex para poner el menú en horizontal*/
+nav{
+    padding: 20px 0px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Padding horizontal a cada cajita para separarlas un poco*/
+nav div{
+    padding: 0px 36px;
+    border: 1px solid black;
+    margin-right: 10px;
+    height: 25px;
+    align-content: center;
+    background-color: rgb(71, 162, 236);
+}
+
+/* Quitar el subrayado a los links*/
+nav a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Botones reactivos al pasar el ratón por encima*/
+nav div:hover{
+    background-color: rgb(62, 38, 168);
+    cursor: pointer;
+}
+
+/* Le doy al botón de nav en el que me encuentro el mismo color que el que tiene cuando lo señalo
+para indicar al usuario que está en ese link*/
+nav div:nth-child(4){
+    background-image: linear-gradient(white, rgb(62, 38, 168) 5px);
+}
+
+/* Distribuyo el grid de la web a partir de la sección de article en 2 column y 3 filas*/
+article{
+    border: 1px solid black;
+    padding: 0px 35px;
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 1.5fr 220px 250px;
+}
+
+/* Fusiono celdas según me convenga*/
+.seccion1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.seccion2{
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.image1{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content:center;
+    padding-top: 50px;
+    justify-content: center;
+}
+
+.image2{
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+/* Configuro la imagen de abajo*/
+.image2 img{
+    height: 100%;
+    width: 100%;
+    object-fit:cover;
+    padding: 40px 80px;
+}
+
+/* Configuro el pie de página y alineo el texto verticalmente*/
+footer{
+    border: 1px solid black;
+    height: 60px;
+    align-content: center;
+}
+
+/* Alineo el texto al centro horizontalmente*/
+.pie{
+    text-align: center;
+}
+
+.image1 img{
+    height: 160px;
+    padding: 10px;
+}
